@@ -1,6 +1,12 @@
-# OpenAI API Quickstart - Node.js example app
+# A chatbot with OpenAI API
 
-This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/). Check out the tutorial or follow the instructions below to get set up.
+CREDITS: This project is adapted from [this repository](https://github.com/openai/openai-quickstart-node).
+
+This is an example chatbot app based on the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/). Check out the tutorial or follow the instructions below to get set up.
+
+## Motivation
+
+People from some regions, such as China (Including HK), cannot access [ChatGPT](https://chat.openai.com/chat), so I want to build one private instance to help them out. With this instance, people can directly try ChatGPT, and do not need to login.
 
 ## Setup
 
@@ -11,7 +17,7 @@ This is an example pet name generator app used in the OpenAI API [quickstart tut
 3. Navigate into the project directory
 
    ```bash
-   $ cd openai-quickstart-node
+   $ cd MyChatGPT
    ```
 
 4. Install the requirements
