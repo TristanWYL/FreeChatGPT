@@ -1,11 +1,11 @@
 import Head from "next/head";
-import { Appbar } from "./components/Appbar";
-import { Input } from "./components/Input";
-import { Line, LoadingSkeleton } from "./components/Line";
-import { ScrollToBottom } from "./components/ScrollToBottom";
-import { useChatProps } from "./utils/useChatProps";
+import { Appbar } from "../lib/components/Appbar";
+import { Input } from "../lib/components/Input";
+import { Line, LoadingSkeleton } from "../lib/components/Line";
+import { ScrollToBottom } from "../lib/components/ScrollToBottom";
+import { useChatProps } from "../lib/utils/useChatProps";
 import React, { useRef } from "react";
-import { Tips } from "./components/Tips";
+import { Tips } from "../lib/components/Tips";
 
 export default function Home() {
   const { loading, fullConversation, onSubmit, prompt, setPrompt } =
