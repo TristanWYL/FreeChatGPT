@@ -15,8 +15,5 @@
     "react-markdown": "^8.0.5",
     "react-social-icons": "^5.15.0",
     "remark-gfm": "^3.0.1"
-  },
-  "engines": {
-    "node": ">=14.6.0"
   }
 }
