@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+textarea {
+  border: none;
+  background-color: transparent;
+  color: white;
+  width: 10000px;
+  height: 24px;
+  overflow: auto;
+  resize: none;
+}
+textarea:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.send-icon {
+  color: whitesmoke;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+}
+
+.send-icon:hover {
+  background-color: #333
+}
+.send-icon:active {
+  background-color: #222
+}
