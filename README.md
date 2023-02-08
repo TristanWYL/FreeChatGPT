@@ -6,7 +6,9 @@ This is an example chatbot app based on the OpenAI API [quickstart tutorial](htt
 
 ## Motivation
 
-People from some regions, such as China (Including HK), cannot access [ChatGPT](https://chat.openai.com/chat), so I want to build one private instance to help them out. With this instance, people can directly try ChatGPT, and do not need to login.
+People from some regions, such as China, cannot access [ChatGPT](https://chat.openai.com/chat), so I want to build one private instance to help them out. With this instance, people can directly try ChatGPT, and do not need to login. One instance can be found [here](https://free-chat-gpt.vercel.app/).
+
+![Alt text](screenshot.png)
 
 ## Setup
 
