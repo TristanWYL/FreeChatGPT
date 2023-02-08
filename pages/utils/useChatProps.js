@@ -1,6 +1,7 @@
 import React from "react";
 
 const conversation = [];
+const fullConversation = [];
 export const useChatProps = () => {
   const [prompt, setPrompt] = React.useState("");
   const [loading, setLoading] = React.useState(false);
@@ -11,7 +12,8 @@ export const useChatProps = () => {
       alert("Please enter your question!");
       return;
     }
-    conversation.push("Human:" + prompt);
+    conversation.push({ role: "Human", words: prompt });
+    fullConversation.push({ role: "Human", words: prompt });
     setLoading(true);
     setPrompt("");
     try {
@@ -21,10 +23,13 @@ export const useChatProps = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          prompt: conversation.slice(-3).join("\n\n") + "\nAI:",
+          prompt:
+            conversation
+              .slice(-3)
+              .map((speech) => `${speech.role}:${speech.words}`)
+              .join("\n\n") + "\nAI:",
         }),
       });
-
       const data = await response.json();
       if (response.status !== 200) {
         throw (
@@ -32,12 +37,11 @@ export const useChatProps = () => {
           new Error(`Request failed with status ${response.status}`)
         );
       }
-      conversation.push("AI:" + data.result);
+      conversation.push({ role: "AI", words: data.result });
+      fullConversation.push({ role: "AI", words: data.result });
     } catch (error) {
       conversation.pop();
-      // Consider implementing your own error handling logic here
-      console.error(error);
-      alert(error.message);
+      fullConversation.push({ role: "AI", words: error.message, error: true });
     } finally {
       setLoading(false);
     }
@@ -45,6 +49,7 @@ export const useChatProps = () => {
   return {
     loading,
     conversation,
+    fullConversation,
     onSubmit,
     prompt,
     setPrompt,
